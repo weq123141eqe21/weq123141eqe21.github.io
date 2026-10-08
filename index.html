@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>欧拉图课堂投票</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="badge">课堂实时投票</div>
+      <h1>下面哪一个是欧拉图？</h1>
+      <p class="subtitle">请选择你认为正确的选项</p>
+    </section>
+
+    <section class="question-card">
+      <img src="assets/euler-question.png" alt="欧拉图选择题，选项 A、B、C、D" />
+    </section>
+
+    <section class="vote-card">
+      <div class="options" id="options">
+        <button class="option" data-option="A"><span>A</span></button>
+        <button class="option" data-option="B"><span>B</span></button>
+        <button class="option" data-option="C"><span>C</span></button>
+        <button class="option" data-option="D"><span>D</span></button>
+      </div>
+
+      <div class="message" id="message">每台设备默认只能提交一次</div>
+
+      <div class="results hidden" id="results">
+        <div class="results-head">
+          <h2>实时结果</h2>
+          <span id="totalVotes">0 票</span>
+        </div>
+
+        <div class="result-row">
+          <div class="result-label">A</div>
+          <div class="bar-track"><div class="bar-fill" id="bar-A"></div></div>
+          <div class="result-value" id="value-A">0%</div>
+        </div>
+
+        <div class="result-row">
+          <div class="result-label">B</div>
+          <div class="bar-track"><div class="bar-fill" id="bar-B"></div></div>
+          <div class="result-value" id="value-B">0%</div>
+        </div>
+
+        <div class="result-row">
+          <div class="result-label">C</div>
+          <div class="bar-track"><div class="bar-fill" id="bar-C"></div></div>
+          <div class="result-value" id="value-C">0%</div>
+        </div>
+
+        <div class="result-row">
+          <div class="result-label">D</div>
+          <div class="bar-track"><div class="bar-fill" id="bar-D"></div></div>
+          <div class="result-value" id="value-D">0%</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span id="modeText">正在连接投票服务…</span>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
